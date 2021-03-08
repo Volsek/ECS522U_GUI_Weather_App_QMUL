@@ -24,4 +24,4 @@
 ## 📝 License
 
 Copyright © 2021 [Dawid Jedryszczak](https://github.com/Volsek).<br />
-This project is [ISC](https://github.com/Volsek/Gui-weather-app/blob/master/LICENSE) licensed.
+This project is [MIT](https://github.com/Volsek/Gui-weather-app/blob/master/LICENSE) licensed.
