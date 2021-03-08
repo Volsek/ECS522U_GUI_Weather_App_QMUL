@@ -8,7 +8,7 @@
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
   <a href="https://github.com/Volsek/Gui-weather-app/blob/master/LICENSE" target="_blank">
-    <img alt="License: ISC" src="https://img.shields.io/github/license/Volsek/GUI Weather App" />
+    <img alt="License: ISC" src="https://img.shields.io/github/license/Volsek/Gui-Weather-app" />
   </a>
 </p>
 
@@ -23,18 +23,8 @@
 * Website: volsek.github.io
 * Github: [@Volsek](https://github.com/Volsek)
 
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Volsek/Gui-weather-app/issues). 
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
 Copyright © 2021 [Dawid Jedryszczak](https://github.com/Volsek).<br />
 This project is [ISC](https://github.com/Volsek/Gui-weather-app/blob/master/LICENSE) licensed.
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
