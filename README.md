@@ -7,9 +7,6 @@
   <a href="https://github.com/Volsek/Gui-weather-app/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
-  <a href="https://github.com/Volsek/Gui-weather-app/blob/master/LICENSE" target="_blank">
-    <img alt="License: ISC" src="https://img.shields.io/github/license/Volsek/Gui-Weather-app" />
-  </a>
 </p>
 
 > Graphical User Interface project
