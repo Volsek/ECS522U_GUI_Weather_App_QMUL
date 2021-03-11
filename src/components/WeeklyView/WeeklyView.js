@@ -1,4 +1,6 @@
 import React, {Component} from "react";
+import "./WeeklyView.css"
+import { MDBContainer, MDBRow, MDBCol,MDBIcon } from "mdbreact";
 
 class weeklyView extends Component {
     constructor(props){
@@ -14,29 +16,37 @@ class weeklyView extends Component {
 
     render() {
         return(
-            <main id="weeklyview">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md">
+            <main id="weeklyview" >
+                <MDBContainer fluid={true}>
+                    <MDBRow>
+                        <MDBCol>
                             1
-                        </div>
-                        <div className="col-md">
+                        </MDBCol>
+                        <MDBCol>
                             2
-                        </div>
-                        <div className="col-md">
+                        </MDBCol>
+                        <MDBCol>
                             3
-                        </div>
-                        <div className="col-md">
+                        </MDBCol>
+                        <MDBCol>
                             4
-                        </div>
-                        <div className="col-md">
+                        </MDBCol>
+                        <MDBCol>
                             5
-                        </div>
-                    </div>
-                </div>
+                        </MDBCol>
+                    </MDBRow>
+                </MDBContainer>
             </main>
         )
     }
 }
 
 export default weeklyView
+
+/*
+<mdb.MDBRow className="pt-5 homeRows" center>
+<mdb.MDBCol size="12" md="5">
+    <mdb.
+1
+</mdb.MDBCol>
+</mdb.MDBRow>*/
