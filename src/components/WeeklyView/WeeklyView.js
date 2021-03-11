@@ -17,22 +17,63 @@ class weeklyView extends Component {
     render() {
         return(
             <main id="weeklyview" >
-                <MDBContainer fluid={true}>
-                    <MDBRow>
+                <h1 class="mb-0">Week</h1>
+                <MDBContainer fluid={true} >
+                    <MDBRow id="Outerbox_row">
                         <MDBCol>
-                            1
+                            <MDBRow center={true}>
+                                Day
+                            </MDBRow>
+                            <MDBRow center={true}>
+                                Icon
+                            </MDBRow>
+                            <MDBRow center={true}>
+                                Temp
+                            </MDBRow>
                         </MDBCol>
                         <MDBCol>
-                            2
+                            <MDBRow center={true}>
+                                Day
+                            </MDBRow>
+                            <MDBRow center={true}>
+                                Icon
+                            </MDBRow>
+                            <MDBRow center={true}>
+                                Temp
+                            </MDBRow>
                         </MDBCol>
                         <MDBCol>
-                            3
+                            <MDBRow center={true}>
+                                Day
+                            </MDBRow>
+                            <MDBRow center={true}>
+                                Icon
+                            </MDBRow>
+                            <MDBRow center={true}>
+                                Temp
+                            </MDBRow>
                         </MDBCol>
                         <MDBCol>
-                            4
+                            <MDBRow center={true}>
+                                Day
+                            </MDBRow>
+                            <MDBRow center={true}>
+                                Icon
+                            </MDBRow>
+                            <MDBRow center={true}>
+                                Temp
+                            </MDBRow>
                         </MDBCol>
                         <MDBCol>
-                            5
+                            <MDBRow center={true}>
+                                Day
+                            </MDBRow>
+                            <MDBRow center={true}>
+                                Icon
+                            </MDBRow>
+                            <MDBRow center={true}>
+                                Temp
+                            </MDBRow>
                         </MDBCol>
                     </MDBRow>
                 </MDBContainer>
