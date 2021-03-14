@@ -1,6 +1,7 @@
 import "./HourlyView.css"
 import { MDBContainer, MDBRow, MDBCol,MDBIcon } from "mdbreact";
 
+
 const HourlyView = () => {
     return (
         <div className="mainHoursContainer">
