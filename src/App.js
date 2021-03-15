@@ -1,6 +1,8 @@
 import './App.css';
 import WeeklyView from "./components/WeeklyView/WeeklyView";
 import HourlyView from "./components/HourlyView/HourlyView";
+import API from "./components/API";
+
 function App() {
   return (
     <div className="App">
