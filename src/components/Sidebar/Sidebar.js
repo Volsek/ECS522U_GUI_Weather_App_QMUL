@@ -21,20 +21,16 @@ class SideBar extends Component{
   render(){
     const menu = ["Settings", "Placeholder", "Placeholder"]
     return(
-      <Navbar bg = "dark" variant= "dark">
+      <Navbar id="nav" bg = "dark" variant= "dark">
         <Navbar.Brand href="#home">
           <img
           src="./hamburger.png"
           width="50"
           height="50"
           className="d-inline-block align-top"
-          alt="React Bootstrap logo"
            />
         </Navbar.Brand>
-        <div id="searchBreak">
-        </div>
         <Form inline>
-        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
         <Button variant="outline-info">Search</Button>
         </Form>
       </Navbar>
