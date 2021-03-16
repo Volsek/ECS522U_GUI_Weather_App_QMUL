@@ -21,7 +21,9 @@ class SideBar extends Component{
   render(){
     const menu = ["Settings", "Placeholder", "Placeholder"]
     return(
-      <Navbar id="nav" bg = "dark" variant= "dark">
+      <div>
+        <div>
+        <Navbar id="nav" bg = "dark" variant= "dark">
         <Navbar.Brand href="#home">
           <img
           src="./hamburger.png"
@@ -34,6 +36,11 @@ class SideBar extends Component{
         <Button variant="outline-info">Search</Button>
         </Form>
       </Navbar>
+        </div>
+        <div>
+        </div>
+      </div>
+
     )
 
   }
