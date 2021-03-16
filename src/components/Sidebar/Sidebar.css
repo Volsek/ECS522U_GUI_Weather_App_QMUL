@@ -1,6 +1,15 @@
 .form-inline {
 display: inline;
 position: relative;
-left: 65vw;  
+left: 40vw;  
 right: 0;
+}
+
+#nav {
+  height: 8vh;
+}
+
+#search {
+  position: relative;
+  width: 200pt;
 }
