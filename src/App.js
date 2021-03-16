@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react'
 import './App.css';
 import WeeklyView from "./components/WeeklyView/WeeklyView";
 import HourlyView from "./components/HourlyView/HourlyView";
-
+import SideBar from "./components/Sidebar/Sidebar";
 
 import API from "./components/API";
 
@@ -33,7 +33,7 @@ function App() {
     <div className="App">
       <main>
         <nav>
-
+          <SideBar/>
         </nav>
         <div id='SelectedDay'>
 
