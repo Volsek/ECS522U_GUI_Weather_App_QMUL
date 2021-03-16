@@ -2,6 +2,10 @@ import {useState, useEffect} from 'react'
 import './App.css';
 import WeeklyView from "./components/WeeklyView/WeeklyView";
 import HourlyView from "./components/HourlyView/HourlyView";
+<<<<<<< HEAD
+=======
+import API from "./components/API";
+>>>>>>> fabb403c18a51e3be3f9ab4f4476e001b70d3730
 
 function App() {
 
