@@ -1,50 +1,70 @@
 import React, {Component} from "react";
 import "./Sidebar.css"
-import { Button } from 'react-bootstrap';
-import { Navbar } from 'react-bootstrap';
-import { FormControl } from 'react-bootstrap';
-import { Form } from 'react-bootstrap';
-
+import {
+  MDBNavbar,
+  MDBNavbarNav,
+  MDBNavItem,
+  MDBNavLink,
+  MDBNavbarToggler,
+  MDBCollapse,
+  MDBContainer
+} from 'mdbreact';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 class SideBar extends Component{
-  constructor(props) {
-      super(props);
-      this.state ={
-          menu_open : false,
-      }
-  }
+  state = {
+    collapseID: ''
+  };
 
-  menuToggle(){
-    this.setState({menu_open:!this.state.menu_open});
-  }
+  toggleCollapse = collapseID => () => {
+    this.setState(prevState => ({
+      collapseID: prevState.collapseID !== collapseID ? collapseID : ''
+    }));
+  };
 
   render(){
-    const menu = ["Settings", "Placeholder", "Placeholder"]
     return(
-      <div>
-        <div>
-        <Navbar id="nav" bg = "dark" variant= "dark">
-        <Navbar.Brand href="#home">
-          <img
-          src="./hamburger.png"
-          width="50"
-          height="50"
-          className="d-inline-block align-top"
-           />
-        </Navbar.Brand>
-        <Form inline>
-        <Button variant="outline-info">Search</Button>
-        </Form>
-      </Navbar>
-        </div>
-        <div>
-        </div>
-      </div>
+
+      <Router>
+        <MDBContainer
+        style={{padding: 0}} 
+        >
+          <MDBNavbar
+          color='grey'
+          light
+          >
+            <MDBContainer>
+              <MDBNavbarToggler left 
+              onClick={this.toggleCollapse('navbarCollapse1')}
+              style={{backgroundColor: '#FFFFFF'}} 
+
+              />
+              <MDBCollapse
+                id='navbarCollapse1'
+                isOpen={this.state.collapseID}
+                navbar
+                color='white'
+              >
+                <MDBNavbarNav left>
+                  <MDBNavItem active>
+                    <MDBNavLink to='#!'>Home</MDBNavLink>
+                  </MDBNavItem>
+                  <MDBNavItem>
+                    <MDBNavLink to='#!'>Link</MDBNavLink>
+                  </MDBNavItem>
+                  <MDBNavItem>
+                    <MDBNavLink to='#!'>Profile</MDBNavLink>
+                  </MDBNavItem>
+                </MDBNavbarNav>
+
+               </MDBCollapse>
+             </MDBContainer>
+           </MDBNavbar>
+        </MDBContainer>
+      </Router>
 
     )
-
   }
-
 }
 
 export default SideBar;

@@ -1,15 +1,4 @@
-.form-inline {
-display: inline;
-position: relative;
-left: 40vw;  
-right: 0;
-}
-
-#nav {
-  height: 8vh;
-}
-
-#search {
-  position: relative;
-  width: 200pt;
+.navbar.navbar-light .breadcrumb .nav-item .nav-link, .navbar.navbar-light .navbar-nav .nav-item .nav-link {
+	color: white;
+	transition: .35s;
 }
