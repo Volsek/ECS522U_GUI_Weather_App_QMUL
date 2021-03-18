@@ -1,42 +1,31 @@
-import {useState, useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import './App.css';
 import WeeklyView from "./components/WeeklyView/WeeklyView";
 import HourlyView from "./components/HourlyView/HourlyView";
-
-
-import API from "./components/API";
+import SideBar from "./components/Sidebar/Sidebar";
 
 
 function App() {
-
+  const lat = 33.44179
+  const lon = -94.037689
+  const apikey = "d8d2a988639cedb5768cd091a9caa26b"
   const [weather, setWeather] =  useState("")
   const [isLoaded , setIsLoaded]  = useState(false)
 
   useEffect(() => {
-    const getWeather  =  async() => {
-      const weatherFromServer = await fetchWeather()
-      
-      setWeather(weatherFromServer)
-      setIsLoaded(true)
-    }
+    fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=alerts,minutely&units=metric&appid=${apikey}`)
+        .then((res) => res.json())
+        .then((data) => setWeather(data));
+  }, [lon,lat,apikey]);
 
-    getWeather()
-  }, [])
-  //Fetch tasks 
-  const fetchWeather =  async() => {
-    const res  = await  fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=33.44179&lon=-94.037689&exclude=alerts,minutely&appid=d8d2a988639cedb5768cd091a9caa26b&units=metric`)
-    const data  =  await res.json()
-    console.log(data.hourly)
-    return data
-  }
-
+  
 
 
   return (
     <div className="App">
       <main>
         <nav>
-
+          <SideBar/>
         </nav>
         <div id='SelectedDay'>
 
@@ -45,7 +34,7 @@ function App() {
           <HourlyView weatherObject = {weather}  isLoaded =  {isLoaded}/>
         </div>
         <div id='WeeklyView'>
-          <WeeklyView/>
+          <WeeklyView weather = {weather}/>
         </div>
 
       </main>

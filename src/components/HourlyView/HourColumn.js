@@ -1,4 +1,3 @@
-
 import "./HourlyView.css"
 import { MDBRow, MDBCol } from "mdbreact";
 
