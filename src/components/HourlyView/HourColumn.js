@@ -1,5 +1,8 @@
+
 import "./HourlyView.css"
-import { MDBRow, MDBCol } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol,MDBIcon } from "mdbreact";
+
+import {useState} from 'react'
 
 
 const HourColumn = ({hours , icon , temp }) => {

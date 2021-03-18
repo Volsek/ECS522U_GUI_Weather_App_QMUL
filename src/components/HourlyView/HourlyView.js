@@ -1,6 +1,7 @@
 import "./HourlyView.css"
-import { MDBContainer, MDBRow} from "mdbreact"
+import { MDBContainer, MDBRow, MDBCol,MDBIcon } from "mdbreact"
 import HourColumn from "./HourColumn"
+import { unstable_concurrentAct } from "react-dom/test-utils"
 
 const HourlyView = ({weather}) => {
 
@@ -8,7 +9,7 @@ const HourlyView = ({weather}) => {
     return (
         <div className="mainHoursContainer">
 
-            <h1 className="mb-0">Today</h1>
+            <h1 class="mb-0">Today</h1>
             <MDBContainer  fluid={true}  > 
                     <MDBRow id="main_row">
                         <HourColumn hours = {weather.timezone} icon = "something"  temp  = "25 c" />
