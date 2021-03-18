@@ -1,25 +1,39 @@
 
 import "./HourlyView.css"
-import { MDBContainer, MDBRow, MDBCol,MDBIcon } from "mdbreact";
+import { MDBRow, MDBCol } from "mdbreact";
 
 import {useState} from 'react'
 
 
 const HourColumn = ({hours , icon , temp }) => {
+   
 
-    
+    const convertUnix = (unix) => {
+
+        return (
+            new Date(unix * 1000).getHours().toString() +  ":00"
+        )
+    }
+
+    // const convertCelsius  = (kelvin) => {
+    //     var celsius  =  kelvin - 273.15
+    //     return (
+    //         celsius
+    //     )
+    // }
+    var hoursConverted =  convertUnix(hours)
     return (
             <MDBCol className="hoursCol">
                 <MDBRow center={true} className="rowHours">
-                    {hours}
+                    {hoursConverted}
                 </MDBRow>
 
                 <MDBRow center={true} className="rowPic">
-                    {icon}
+                    <img src = {icon} alt ="somethingwrong" width = "100px" height =  "100px"/>
                 </MDBRow>
 
                 <MDBRow center={true} className="rowTemperature">
-                    {temp}
+                    {temp}<p>  &deg; C</p>
                 </MDBRow>
 
             </MDBCol>

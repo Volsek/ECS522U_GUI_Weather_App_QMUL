@@ -1,6 +1,5 @@
 #main_row{
     background-color: #388e3c;
-    height: 250x;
 
   
 }
@@ -14,16 +13,16 @@
     background: #1b5e20;
     margin: 1rem;
     color: white;
-    height: 180px;
 }
 
 .rowHours, .rowTemperature{
-    height: 25%;
+    height: 20%;
 
 }
 
 .rowPic{
-    height: 50%;
+    height: 60%;
+    
 }
 h1 {
     display: flex;
