@@ -15,7 +15,9 @@ function App() {
   useEffect(() => {
     fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=alerts,minutely&units=metric&appid=${apikey}`)
         .then((res) => res.json())
-        .then((data) => setWeather(data));
+        .then((data) => setWeather(data))
+        setIsLoaded(true)
+
   }, [lon,lat,apikey]);
 
   

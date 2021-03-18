@@ -6,6 +6,7 @@ const HourlyView = ({ weatherObject, isLoaded }) => {
     var d = new Date();
     var currentHours = d.getHours();  
 
+
     return (
 
         <div className="mainHoursContainer">

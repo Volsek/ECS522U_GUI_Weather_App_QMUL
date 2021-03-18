@@ -1,9 +1,5 @@
 import "./HourlyView.css"
 import { MDBRow, MDBCol } from "mdbreact";
-
-import {useState} from 'react'
-
-
 const HourColumn = ({hours , icon , temp }) => {
    
 
@@ -28,7 +24,7 @@ const HourColumn = ({hours , icon , temp }) => {
                 </MDBRow>
 
                 <MDBRow center={true} className="rowPic">
-                    <img src = {icon} alt ="somethingwrong" width = "100px" height =  "100px"/>
+                    <img src = {icon}  width = "100px" height =  "100px"/>
                 </MDBRow>
 
                 <MDBRow center={true} className="rowTemperature">
