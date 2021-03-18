@@ -10,17 +10,13 @@ function App() {
   const lon = -94.037689
   const apikey = "d8d2a988639cedb5768cd091a9caa26b"
   const [weather, setWeather] =  useState("")
-  const [isLoaded , setIsLoaded]  = useState(false)
+  
 
   useEffect(() => {
     fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=alerts,minutely&units=metric&appid=${apikey}`)
         .then((res) => res.json())
-        .then((data) => setWeather(data))
-        setIsLoaded(true)
-
+        .then((data) => setWeather(data));
   }, [lon,lat,apikey]);
-
-  
 
 
   return (
@@ -33,7 +29,7 @@ function App() {
 
         </div>
         <div id='HourlyView'>
-          <HourlyView weatherObject = {weather}  isLoaded =  {isLoaded}/>
+          <HourlyView weatherObject = {weather}  />
         </div>
         <div id='WeeklyView'>
           <WeeklyView weather = {weather}/>
