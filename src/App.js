@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import './App.css';
 import WeeklyView from "./components/WeeklyView/WeeklyView";
 import HourlyView from "./components/HourlyView/HourlyView";
@@ -11,23 +11,11 @@ function App() {
   const apikey = "d8d2a988639cedb5768cd091a9caa26b"
   const [weather, setWeather] =  useState("")
 
-  useEffect(() => {
-    const getWeather  =  async() => {
-      const weatherFromServer = await fetchWeather()
-      setWeather(weatherFromServer)
-    }
-
-    getWeather()
-  }, [])
-  //Fetch tasks 
-  const fetchWeather =  async() => {
-    const res  = await  fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=alerts,minutely&units=metric&appid=${apikey}`)
-    const data  =  await res.json()
-    console.log(data.hourly)
-    return data
-  }
-
-
+    useEffect(() => {
+      fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=alerts,minutely&units=metric&appid=${apikey}`)
+          .then((res) => res.json())
+          .then((data) => setWeather(data));
+    }, [lon,lat,apikey]);
 
   return (
     <div className="App">
@@ -42,7 +30,7 @@ function App() {
           <HourlyView weather = {weather} />
         </div>
         <div id='WeeklyView'>
-          <WeeklyView weather={{weather}}/>
+          <WeeklyView weather = {weather}/>
         </div>
 
       </main>
