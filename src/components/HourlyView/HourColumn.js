@@ -24,7 +24,7 @@ const HourColumn = ({hours , icon , temp }) => {
                 </MDBRow>
 
                 <MDBRow center={true} className="rowPic">
-                    <img src = {icon}  width = "100px" height =  "100px"/>
+                    <img src = {icon}  width = "100px" height =  "100px" alt="icon"/>
                 </MDBRow>
 
                 <MDBRow center={true} className="rowTemperature">
