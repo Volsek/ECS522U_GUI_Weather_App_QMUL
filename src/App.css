@@ -27,6 +27,11 @@
 .App-link {
   color: #61dafb;
 }
+#SelectedDay{
+  height: 15vh;
+  background-color:#54906c;
+
+}
 
 @keyframes App-logo-spin {
   from {

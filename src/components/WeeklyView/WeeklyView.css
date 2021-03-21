@@ -1,17 +1,17 @@
 #Outerbox_row{
-    background-color: #388e3c
+    background-color: #54906c
 }
 .main{
-    background-color: #388e3c
+    background-color: #54906c
 }
 .col{
-    background: #1b5e20;
+    background:#39694d;
     margin: 1rem;
     color: white;
 }
 h1 {
     display: flex;
-    background-color:#388e3c;
+    background-color: #39694d;
     flex-direction: row;
     color: white;
 }

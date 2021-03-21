@@ -1,18 +1,19 @@
 #main_row{
-    background-color: #388e3c;
+    background-color:#54906c;
 
   
 }
 .mainHoursContainer{
-    background-color: #388e3c;
+    background-color:#54906c;
     
 }
 
 /*custom height column*/
 .hoursCol{
-    background: #1b5e20;
+    background:#39694d;
     margin: 1rem;
     color: white;
+    backdrop-filter: blur(10px);
 }
 
 .rowHours, .rowTemperature{
@@ -20,13 +21,19 @@
 
 }
 
+.main-row{
+    filter: blur(4px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 .rowPic{
     height: 60%;
     
 }
 h1 {
     display: flex;
-    background-color:#388e3c;
+    background-color: #54906c;
     flex-direction: row;
     color: white;
 }

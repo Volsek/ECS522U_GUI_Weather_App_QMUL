@@ -3,6 +3,7 @@ import './App.css';
 import WeeklyView from "./components/WeeklyView/WeeklyView";
 import HourlyView from "./components/HourlyView/HourlyView";
 import SideBar from "./components/Sidebar/Sidebar";
+import SelectedDayView from './components/SelectedDayView/SelectedDayView';
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
           <SideBar/>
         </nav>
         <div id='SelectedDay'>
-
+          <SelectedDayView/>
         </div>
         <div id='HourlyView'>
           <HourlyView weatherObject = {weather}  />

@@ -2,3 +2,15 @@
 	color: white;
 	transition: .35s;
 }
+
+.body {
+	width: 100vw;
+}
+
+.searchBar {
+	padding-left: 0px;
+}
+
+.primary-color{
+	color: white !important;
+}

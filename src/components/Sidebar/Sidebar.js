@@ -10,6 +10,7 @@ import {
   MDBContainer
 } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
+import Searchbar from "../Searchbar/Searchbar";
 
 class SideBar extends Component{
   state = {
@@ -27,25 +28,26 @@ class SideBar extends Component{
 
       <Router>
         <MDBContainer
-        style={{padding: 0}} 
+        style={{padding: 0, margin:0}} 
         >
           <MDBNavbar
-          color='grey'
-          light
+          color='elegant-color-dark'
+          expand="md"
+          dark
           >
             <MDBContainer>
               <MDBNavbarToggler left 
               onClick={this.toggleCollapse('navbarCollapse1')}
-              style={{backgroundColor: '#FFFFFF'}} 
+              dark
 
               />
+              <Searchbar/>
               <MDBCollapse
                 id='navbarCollapse1'
                 isOpen={this.state.collapseID}
                 navbar
-                color='white'
               >
-                <MDBNavbarNav left>
+                <MDBNavbarNav left navbar-dark >
                   <MDBNavItem active>
                     <MDBNavLink to='#!'>Home</MDBNavLink>
                   </MDBNavItem>
@@ -56,7 +58,6 @@ class SideBar extends Component{
                     <MDBNavLink to='#!'>Profile</MDBNavLink>
                   </MDBNavItem>
                 </MDBNavbarNav>
-
                </MDBCollapse>
              </MDBContainer>
            </MDBNavbar>
