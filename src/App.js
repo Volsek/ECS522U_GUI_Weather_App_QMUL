@@ -31,7 +31,7 @@ function App() {
           
         </div>
         <div id='DayView'>
-          <DayView/>
+          <DayView  weather =  {weather}/>
         </div>
         <div id='HourlyView'>
           <HourlyView weatherObject = {weather}  />
