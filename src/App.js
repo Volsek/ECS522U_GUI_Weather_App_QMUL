@@ -4,7 +4,7 @@ import WeeklyView from "./components/WeeklyView/WeeklyView";
 import HourlyView from "./components/HourlyView/HourlyView";
 import SideBar from "./components/Sidebar/Sidebar";
 import SelectedDayView from './components/SelectedDayView/SelectedDayView';
-
+import DayView from './components/DayView/DayView'
 
 function App() {
   const lat = 33.44179
@@ -28,6 +28,10 @@ function App() {
         </nav>
         <div id='SelectedDay'>
           <SelectedDayView/>
+          
+        </div>
+        <div id='DayView'>
+          <DayView/>
         </div>
         <div id='HourlyView'>
           <HourlyView weatherObject = {weather}  />
