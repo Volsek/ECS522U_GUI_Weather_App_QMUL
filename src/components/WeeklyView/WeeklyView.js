@@ -30,6 +30,7 @@ const num_to_day = (num)=>{
                                     <MDBRow center={true}>
                                         <img
                                         src={`http://openweathermap.org/img/w/${d.weather[0].icon}.png`}
+                                        height="50px"
                                         alt={"Icon"}
                                         />
                                     </MDBRow>

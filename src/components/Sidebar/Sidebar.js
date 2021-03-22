@@ -28,7 +28,7 @@ class SideBar extends Component{
 
       <Router>
         <MDBContainer
-        style={{padding: 0, margin:0}} 
+        style={{padding: 0, margin:0, maxWidth:"100%"}} 
         >
           <MDBNavbar
           color='elegant-color-dark'
@@ -38,13 +38,18 @@ class SideBar extends Component{
             <MDBContainer>
               <MDBNavbarToggler left 
               onClick={this.toggleCollapse('navbarCollapse1')}
+
               dark
 
               />
-              <Searchbar/>
+              <div id="searchBar">
+                <Searchbar/>
+              </div>
               <MDBCollapse
                 id='navbarCollapse1'
                 isOpen={this.state.collapseID}
+                style={{position:"relative", right:"20vw", marginLeft:"0px"}} 
+
                 navbar
               >
                 <MDBNavbarNav left navbar-dark >
