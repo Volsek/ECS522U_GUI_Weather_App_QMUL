@@ -1,0 +1,87 @@
+.dayMain {
+    background-color :  #54906c;
+    display: flex;
+    flex-direction: column ;
+    width: 100%;
+
+}
+
+.Location{
+    background-color: #54906c;
+    width: 100%;
+    text-align: left;
+    font-size: 22px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    align-items: center;
+    
+}
+.Location p{
+    margin: 0px;
+    font-size: 2rem;
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.Location img{
+    margin-right: 5px;
+
+}
+
+.InformationDay{
+    background-color: orange;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: bisque;
+    height: 200px;
+
+}
+.temperatureToday{
+
+    background-color: #54906c;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+
+.temperatureToday p{
+    margin: 0px;
+    font-size: 5rem;
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.weatherToday{
+    background-color: #54906c;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.weatherToday p{
+    margin: 0px;
+    font-size: 4rem;
+    color: white;
+    font-style: italic;
+}
+
+
+
+
+.currentTodayWeather{
+    height: 85%;
+    background-color:#54906c;
+}
+.detailedWeatherToday{
+    height: 15%;
+    text-align: center;
+}
+.detailedWeatherToday p{
+    margin: 0px;
+    font-size: 20px;
+}
