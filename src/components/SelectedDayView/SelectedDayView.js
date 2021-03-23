@@ -5,13 +5,43 @@ import {MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer} f
 class SelectedDayView extends Component{
   state = {
   };
-
-
-
   render(){
-    return(
+    let Carousel = []
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    for(let i =0; i < 7;i++){
+      let date = new Date();
+      date.setDate(date.getUTCDate() + i);
 
-      <Router>
+      if(i === 0){
+        console.log(i)
+        Carousel.push(
+            <MDBCarouselItem itemId={i+1}>
+              <MDBView>
+                <a>Today</a>
+              </MDBView>
+            </MDBCarouselItem>
+        )
+      }
+      else if(i === 1){
+        Carousel.push(
+            <MDBCarouselItem itemId={i+1}>
+          <MDBView>
+            <a>Tomorrow</a>
+          </MDBView>
+        </MDBCarouselItem>
+        )
+      }
+      else{
+        Carousel.push(
+            <MDBCarouselItem itemId={i+1}>
+          <MDBView>
+            <a>{days[date.getUTCDay()]}</a>
+          </MDBView>
+        </MDBCarouselItem>
+        )
+      }
+    }
+    return(
         <MDBContainer
         style={{padding: "5vh"}} 
         >
@@ -22,42 +52,11 @@ class SelectedDayView extends Component{
           showIndicators={true}
           >
             <MDBCarouselInner>
-              {}
-              <MDBCarouselItem itemId="1">
-                <MDBView>
-                      <a>Today</a>
-                </MDBView>
-              </MDBCarouselItem>
-
-              <MDBCarouselItem itemId="2">
-                <MDBView>
-                      <a>Tomorrow</a>
-                </MDBView>
-              </MDBCarouselItem>
-
-              <MDBCarouselItem itemId="3">
-                <MDBView>
-                      <a>Tomorrow Container</a>
-                </MDBView>
-              </MDBCarouselItem>
-
+              {Carousel}
             </MDBCarouselInner>
           </MDBCarousel>
         </MDBContainer>
-      </Router>
-
     )
-  }
-}
-function getDate(num_of_days_ahead){
-      let date = new Date();
-      date = date.setUTCDate(date.getDate() + num_of_days_ahead);
-      return date.getUTCDay()
-
-}
-function make_carousel(){
-  for(let i =0; i < 7;i++){
-
   }
 }
 
