@@ -2,7 +2,7 @@ import "./DayView.css"
 
 
 
-const DayView = ({ weather }) => {
+const DayView = ({ weather },{day}) => {
     if (weather.current !== undefined) {
         return (
             <div className="dayMain">

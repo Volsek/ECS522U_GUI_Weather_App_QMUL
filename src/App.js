@@ -7,8 +7,9 @@ import SelectedDayView from './components/SelectedDayView/SelectedDayView';
 import DayView from './components/DayView/DayView'
 
 function App() {
-  const lat = 33.44179
-  const lon = -94.037689
+  let currentDay = (new Date().getUTCDay())
+  let lat = 33.44179
+  let lon = -94.037689
   const apikey = "d8d2a988639cedb5768cd091a9caa26b"
   const [weather, setWeather] =  useState("")
   
@@ -31,7 +32,7 @@ function App() {
           
         </div>
         <div id='DayView'>
-          <DayView  weather =  {weather}/>
+          <DayView  weather ={weather} day={currentDay}/>
         </div>
         <div id='HourlyView'>
           <HourlyView weatherObject = {weather}  />

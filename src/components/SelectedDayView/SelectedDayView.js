@@ -50,6 +50,7 @@ class SelectedDayView extends Component{
           length={7}
           showControls={true}
           showIndicators={true}
+          slide={}
           >
             <MDBCarouselInner>
               {Carousel}
