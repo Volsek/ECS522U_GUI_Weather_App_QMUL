@@ -1,13 +1,11 @@
 import React, {Component} from "react";
 import "./SelectedDayView.css"
-import {
-  MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer
-} from 'mdbreact';
-import { BrowserRouter as Router } from 'react-router-dom';
+import {MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer} from 'mdbreact';
 
 class SelectedDayView extends Component{
   state = {
   };
+
 
 
   render(){
@@ -18,45 +16,28 @@ class SelectedDayView extends Component{
         style={{padding: "5vh"}} 
         >
           <MDBCarousel
-          activeItem={2}
-          length={3}
+          activeItem={1}
+          length={7}
           showControls={true}
           showIndicators={true}
-
           >
             <MDBCarouselInner>
+              {}
               <MDBCarouselItem itemId="1">
                 <MDBView>
-                  <MDBContainer>
-                    <MDBContainer>
-                      <a>Yesterday Container</a>
-                    </MDBContainer>
-                  </MDBContainer>
+                      <a>Today</a>
                 </MDBView>
               </MDBCarouselItem>
 
               <MDBCarouselItem itemId="2">
                 <MDBView>
-                  <MDBContainer>
-                    <MDBContainer>
-                      <a>Today Container</a>
-                    </MDBContainer>
-                    <MDBContainer>
-                      <div class="location">
-
-                      </div>
-                    </MDBContainer>
-                  </MDBContainer>
+                      <a>Tomorrow</a>
                 </MDBView>
               </MDBCarouselItem>
 
               <MDBCarouselItem itemId="3">
                 <MDBView>
-                  <MDBContainer>
-                    <MDBContainer>
                       <a>Tomorrow Container</a>
-                    </MDBContainer>
-                  </MDBContainer>
                 </MDBView>
               </MDBCarouselItem>
 
@@ -66,6 +47,17 @@ class SelectedDayView extends Component{
       </Router>
 
     )
+  }
+}
+function getDate(num_of_days_ahead){
+      let date = new Date();
+      date = date.setUTCDate(date.getDate() + num_of_days_ahead);
+      return date.getUTCDay()
+
+}
+function make_carousel(){
+  for(let i =0; i < 7;i++){
+
   }
 }
 
