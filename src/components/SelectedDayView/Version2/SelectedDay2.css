@@ -20,7 +20,7 @@
 
 
 
-#currentDay{
+.currentDay{
     /*background-color: red;*/
     width: 80%;
     display: flex;
@@ -28,10 +28,21 @@
     justify-content: center;
     font-size: 2rem;
 }
+
+.currentDay p{
+    margin: 0px;
+    font-weight:bolder;
+    color: white;
+}
+
 #prevDay{
     /*background-color: seagreen;*/
     width: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+button{
+    border : none;
 }
