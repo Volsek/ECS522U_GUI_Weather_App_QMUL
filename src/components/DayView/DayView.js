@@ -2,8 +2,8 @@ import "./DayView.css"
 
 
 
-const DayView = ({ weather },{day}) => {
-    if (weather.current !== undefined) {
+const DayView = ({ pageWeather, indexApi }) => {
+    if (pageWeather.current !== undefined  &&  indexApi != undefined  && indexApi == -1) {
         return (
             <div className="dayMain">
                 <div className="location">
@@ -14,24 +14,54 @@ const DayView = ({ weather },{day}) => {
                 <div className="informationDay">
 
                     <div className="temperatureToday">
-                        <p> {Math.round(weather.current.temp)}&deg;C</p>
+                        <p> {Math.round(pageWeather.current.temp)}&deg;C</p>
                     </div>
 
                     <div className="weatherToday">
                         <div className="currentTodayWeather">
-                            <img src={"http://openweathermap.org/img/w/" + weather.current.weather[0].icon + ".png"} alt="weatherImage" witdth="60%" height="100%"></img>
+                            <img src={"http://openweathermap.org/img/w/" + pageWeather.current.weather[0].icon + ".png"} alt="weatherImage" witdth="60%" height="100%"></img>
 
                         </div>
 
                         <div className="detailedWeatherToday">
-                            <p> {weather.current.weather[0].main}</p>
+                            <p> {pageWeather.current.weather[0].main}</p>
                         </div>
 
                     </div>
                 </div>
             </div>
         )
-    }else {
+    }else if ((pageWeather != undefined  && indexApi != undefined  && indexApi > -1)){
+        return (
+            <div className="dayMain">
+                <div className="location">
+                    <img src="location.png" height="30px" width="22px" />
+                    <p>London, UK</p>
+                </div>
+
+                <div className="informationDay">
+
+                    <div className="temperatureToday">
+                        <p> {Math.round(pageWeather.temp.day)}&deg;C</p>
+                    </div>
+
+                    <div className="weatherToday">
+                        <div className="currentTodayWeather">
+                            <img src={"http://openweathermap.org/img/w/" + pageWeather.weather[0].icon + ".png"} alt="weatherImage" witdth="60%" height="100%"></img>
+
+                        </div>
+
+                        <div className="detailedWeatherToday">
+                            <p> {pageWeather.weather[0].main}</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        )
+    }
+    
+    else {
         return(<p>Loading</p>)
     }
 }

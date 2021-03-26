@@ -1,5 +1,4 @@
-import React, {Component} from "react";
-import "./SelectedDayView.css"
+/*
 import {MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer} from 'mdbreact';
 
 class SelectedDayView extends Component{
@@ -62,3 +61,4 @@ class SelectedDayView extends Component{
 }
 
 export default SelectedDayView;
+*/
