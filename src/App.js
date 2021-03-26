@@ -23,8 +23,14 @@ function App() {
       console.log("Maxium day reached")
       return false
     }
-    setPageWeather(weather.daily[positionOnApi + 1])
-    setPosition(positionOnApi + 1)
+    if (positionOnApi == -1){
+        setPageWeather(weather.daily[positionOnApi + 2])
+        setPosition(positionOnApi + 2)
+  
+    }else {
+      setPageWeather(weather.daily[positionOnApi + 1])
+      setPosition(positionOnApi + 1)
+    }
 
   }
 
@@ -37,7 +43,8 @@ function App() {
       console.log("Returned to base")
       setPageWeather(weather)
       setPosition(-1)
-    } else {
+    } 
+    else {
       setPageWeather(weather.daily[positionOnApi - 1])
       setPosition(positionOnApi - 1)
     }

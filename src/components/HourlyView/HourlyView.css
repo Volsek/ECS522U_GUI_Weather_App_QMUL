@@ -21,6 +21,11 @@
 
 }
 
+.rowHours{
+    margin-top: 5px;
+    font-size: 1.2rem;
+}
+
 .main-row{
     filter: blur(4px);
     position: absolute;
