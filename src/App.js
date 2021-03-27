@@ -6,6 +6,7 @@ import SideBar from "./components/Sidebar/Sidebar";
 import SelectedDayView from './components/SelectedDayView/SelectedDayView';
 import DayView from './components/DayView/DayView'
 import SelectedDay2 from './components/SelectedDayView/Version2/SelectedDay2';
+import DaySpecView from './components/DaySpecificationView/DaySpecView'
 
 function App() {
   let currentDay = (new Date().getUTCDay())
@@ -95,6 +96,10 @@ function App() {
         </div>
         <div id='DayView'>
           <DayView pageWeather={pageWeather} indexApi={positionOnApi} />
+        </div>
+
+        <div id = "DaySpec">
+          <DaySpecView  pageWeather = {pageWeather} indexApi={positionOnApi}/>
         </div>
         <div id='HourlyView'>
           <HourlyView weatherObject={weather} />

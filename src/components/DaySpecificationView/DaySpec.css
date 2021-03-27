@@ -1,0 +1,71 @@
+.container1{ 
+    width: 100%;
+    background: #54906c;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-around;
+    margin: 0px;
+    color: white;
+    
+ 
+
+}
+
+
+
+
+
+
+.box { 
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  width: 170px;
+  background-color: #39694d;
+  box-sizing: border-box;
+  margin: 10px 5px;
+  border-radius: 15px;
+  overflow: hidden;
+
+
+}
+
+.iconWeatherContainer{
+
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   width: 25%;
+   
+}
+
+.iconWeatherContainer img{
+    height: 40%;
+    width: 80%;
+   
+}
+
+.textContainer{
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  height: 100%;
+  font-size: 16px;;
+}
+.titleSpecContainter{
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  
+  height: 40%;
+}
+
+.valueSpecContainter{
+
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  align-items:flex-start;
+  height: 60%;
+}

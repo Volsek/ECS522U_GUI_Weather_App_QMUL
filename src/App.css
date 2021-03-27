@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #54906c;
 }
 
 .App-logo {
@@ -31,6 +32,9 @@
   height: 15vh;
   background-color:#54906c;
 
+}
+#DaySpec{
+  margin-top: 30px;
 }
 
 @keyframes App-logo-spin {
