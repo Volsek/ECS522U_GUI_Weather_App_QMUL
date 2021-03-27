@@ -14,7 +14,7 @@ const HourlyView = ({ weatherObject }) => {
                 <h1 className="mb-0">Today</h1>
                 <MDBContainer fluid={true} className = "somethingxs" >
                     <MDBRow id="main_row">
-                        {weatherObject.hourly.slice(1, 13).map((aWeather,index) => (
+                        {weatherObject.hourly.slice(1, 4).map((aWeather,index) => (
                             <HourColumn key={index} hours={aWeather.dt} icon={"http://openweathermap.org/img/w/" + aWeather.weather[0].icon + ".png"} temp={Math.round(aWeather.temp)} />
                         ))}
                     </MDBRow>
