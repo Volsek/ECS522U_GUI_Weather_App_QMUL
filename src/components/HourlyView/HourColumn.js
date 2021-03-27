@@ -18,7 +18,7 @@ const HourColumn = ({hours , icon , temp }) => {
     // }
     var hoursConverted =  convertUnix(hours)
     return (
-            <MDBCol className="hoursCol">
+            <MDBCol className="hoursCol" style = {{flex: "0  0 10em"}} >
                 <MDBRow center={true} className="rowHours">
                     {hoursConverted}
                 </MDBRow>

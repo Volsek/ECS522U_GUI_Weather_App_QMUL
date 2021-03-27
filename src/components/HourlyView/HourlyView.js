@@ -5,6 +5,17 @@ import HourColumn from "./HourColumn"
 const HourlyView = ({ weatherObject }) => {
     var d = new Date();
     var currentHours = d.getHours();
+    var width  =  "100px";
+
+
+    const styleMainROw = {
+        "flex-wrap" : "nowrap" ,
+         "overflow-x" : "auto",
+         "flex-direction": "row",
+         "background-color": "#54906c"
+
+         
+    }
 
     if (weatherObject.hourly !== undefined) {
         return (
@@ -12,10 +23,10 @@ const HourlyView = ({ weatherObject }) => {
             <div className="mainHoursContainer">
 
                 <h1 className="mb-0">Today</h1>
-                <MDBContainer fluid={true} className = "somethingxs" >
-                    <MDBRow id="main_row">
-                        {weatherObject.hourly.slice(1, 4).map((aWeather,index) => (
-                            <HourColumn key={index} hours={aWeather.dt} icon={"http://openweathermap.org/img/w/" + aWeather.weather[0].icon + ".png"} temp={Math.round(aWeather.temp)} />
+                <MDBContainer fluid={true} >
+                    <MDBRow id="main_row " style = {styleMainROw}>
+                        {weatherObject.hourly.slice(1, 12).map((aWeather,index) => (
+                            <HourColumn  key={index} hours={aWeather.dt} icon={"http://openweathermap.org/img/w/" + aWeather.weather[0].icon + ".png"} temp={Math.round(aWeather.temp)} />
                         ))}
                     </MDBRow>
                 </MDBContainer>
