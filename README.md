@@ -13,12 +13,33 @@
 
 ### 🏠 [Homepage](https://github.com/Volsek/Gui-weather-app#readme)
 
-## Author
+## Instructions
+
+Install dependencies using nodejs command "npm install" within directory.
+Once installed, the app can be run using "npm run start" within the directory.
+App will be accessible through: localhost:3000/#home
+
+## Authors
 
 👤 **Dawid Jedryszczak**
 
 * Website: volsek.github.io
 * Github: [@Volsek](https://github.com/Volsek)
+
+👤 **Hasan Erisir**
+
+* Github: [@memorycapsule](https://github.com/memorycapsule)
+
+👤 **Emre Aysal**
+
+* Github: [@emreaysal](https://github.com/emreaysal)
+
+👤 **Navid Sheikh**
+
+* Github: [@navid-sheik](https://github.com/navid-sheik)
+
+
+👤 **Sattia**
 
 
 ## 📝 License
