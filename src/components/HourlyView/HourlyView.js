@@ -2,6 +2,10 @@ import "./HourlyView.css"
 import { MDBContainer, MDBRow } from "mdbreact"
 import HourColumn from "./HourColumn"
 
+
+/* Display hourly weather information
+used in scrolling view to show weather
+changes for the duration of the day */
 const HourlyView = ({ weatherObject }) => {
     var d = new Date();
     var currentHours = d.getHours();
@@ -16,7 +20,6 @@ const HourlyView = ({ weatherObject }) => {
 
          
     }
-
     if (weatherObject.hourly !== undefined) {
         return (
 

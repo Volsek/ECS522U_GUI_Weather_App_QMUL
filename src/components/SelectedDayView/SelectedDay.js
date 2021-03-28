@@ -1,9 +1,9 @@
 import React from "react";
-import "./SelectedDay2.css"
+import "./SelectedDay.css"
 
 
 
-const SelectedDay2 = ({ pageWeather , indexApi, moveFowardAction, moveBackwardAction}) => {
+const SelectedDay = ({ pageWeather , indexApi, moveFowardAction, moveBackwardAction}) => {
     
     
     let currentDay = (new Date())
@@ -25,13 +25,13 @@ const SelectedDay2 = ({ pageWeather , indexApi, moveFowardAction, moveBackwardAc
     return (
         <div id = "mainContainter">
             <div id= "prevDay"> 
-                <button type="button" onClick= {moveBackwardAction}><img src= "left.png"  height="20px" width="20px"/> </button>
+                <button type="button" onClick= {moveBackwardAction}><img src= "left-arrow.svg"  height="20px" width="20px"/> </button>
             </div>
             <div class= "currentDay">
                 <p>{convertUnix( pageWeather.current.dt)}</p>
             </div>
             <div id= "nextDay">
-                <button type="button" onClick= {moveFowardAction}><img src= "right.png"  height="20px" width="20px"/> </button>
+                <button type="button" onClick= {moveFowardAction}><img src= "right-arrow.svg"  height="20px" width="20px"/> </button>
             </div>
             
         </div>
@@ -40,13 +40,13 @@ const SelectedDay2 = ({ pageWeather , indexApi, moveFowardAction, moveBackwardAc
     return (
         <div id = "mainContainter">
         <div id= "prevDay"> 
-            <button type="button" onClick= {moveBackwardAction}><img src= "left.png"  height="20px" width="20px"/> </button>
+            <button type="button" onClick= {moveBackwardAction}><img src= "left-arrow.svg"  height="20px" width="20px"/> </button>
         </div>
         <div class= "currentDay">
             <p>{convertUnix( pageWeather.dt)}</p>
         </div>
         <div id= "nextDay">
-            <button type="button" onClick= {moveFowardAction} ><img src= "right.png"  height="20px" width="20px"/> </button>
+            <button type="button" onClick= {moveFowardAction} ><img src= "right-arrow.svg"  height="20px" width="20px"/> </button>
         </div>
         
     </div>
@@ -57,4 +57,4 @@ const SelectedDay2 = ({ pageWeather , indexApi, moveFowardAction, moveBackwardAc
         )}
 }
 
-export default SelectedDay2
+export default SelectedDay

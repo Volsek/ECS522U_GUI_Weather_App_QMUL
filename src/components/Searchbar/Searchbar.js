@@ -1,6 +1,8 @@
 import React from "react";
 import { MDBCol } from "mdbreact";
 
+/* MDB Search Bar
+imports into the nav bar */
 const Searchbar = () => {
   return (
     <div class="searchBar">

@@ -45,3 +45,9 @@
     transform: rotate(360deg);
   }
 }
+
+html, 
+body {
+    background-color:#54906c;
+    min-height: 100%;
+}

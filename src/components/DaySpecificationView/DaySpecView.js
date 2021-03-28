@@ -2,6 +2,10 @@
 import React from 'react'
 import "./DaySpec.css"
 
+/* Scroll-based view of daily weather information
+shows the weather for set times in the location, and 
+allows the user to scroll through */
+
 const DaySpecView = ({ pageWeather , indexApi }) => {
     if (pageWeather.current != undefined  && indexApi == -1){
         return (
@@ -36,7 +40,8 @@ const DaySpecView = ({ pageWeather , indexApi }) => {
                         </div>
 
                         <div className="valueSpecContainter">
-                            {pageWeather.current.pressure} mb                     </div>
+                            {pageWeather.current.pressure} mb                     
+                        </div>
                     </div>
                 </div>
 
