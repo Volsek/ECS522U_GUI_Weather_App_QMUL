@@ -1,38 +1,30 @@
 import "./HourlyView.css"
 import { MDBRow, MDBCol } from "mdbreact";
-const HourColumn = ({hours , icon , temp }) => {
-   
-
+const HourColumn = ({ hours, icon, temp }) => {
+    //Function used to convert unix to time  
     const convertUnix = (unix) => {
-
         return (
-            new Date(unix * 1000).getHours().toString() +  ":00"
-        )
-    }
+            new Date(unix * 1000).getHours().toString() + ":00"
+        )}
 
-    // const convertCelsius  = (kelvin) => {
-    //     var celsius  =  kelvin - 273.15
-    //     return (
-    //         celsius
-    //     )
-    // }
-    var hoursConverted =  convertUnix(hours)
+    //Function calling passing the date in unix and convert to date 
+    var hoursConverted = convertUnix(hours)
     return (
-            <MDBCol className="hoursCol" style = {{flex: "0  0 10em"}} >
-                <MDBRow center={true} className="rowHours">
-                    {hoursConverted}
-                </MDBRow>
+        <MDBCol className="hoursCol" style={{ flex: "0  0 10em" }} >
+            {/* Hours Container */}
+            <MDBRow center={true} className="rowHours">
+                {hoursConverted}
+            </MDBRow>
+            {/* Image Container */}
+            <MDBRow center={true} className="rowPic">
+                <img src={icon} width="100px" height="100px" alt="icon" />
+            </MDBRow>
+            {/* Temp Container */}
+            <MDBRow center={true} className="rowTemperature">
+                {temp}<p>  &deg; C</p>
+            </MDBRow>
 
-                <MDBRow center={true} className="rowPic">
-                    <img src = {icon}  width = "100px" height =  "100px" alt="icon"/>
-                </MDBRow>
-
-                <MDBRow center={true} className="rowTemperature">
-                    {temp}<p>  &deg; C</p>
-                </MDBRow>
-
-            </MDBCol>
-    )
-}
+        </MDBCol>
+    )}
 
 export default HourColumn

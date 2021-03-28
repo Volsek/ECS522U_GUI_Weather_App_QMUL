@@ -60,10 +60,10 @@ class SideBar extends Component{
                     <MDBNavLink to='#!'>Home</MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
-                    <MDBNavLink to='#!'>Link</MDBNavLink>
+                    <MDBNavLink to='#!'>Golf Courses</MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
-                    <MDBNavLink to='#!'>Profile</MDBNavLink>
+                    <MDBNavLink to='#!'>Settings</MDBNavLink>
                   </MDBNavItem>
                 </MDBNavbarNav>
 
