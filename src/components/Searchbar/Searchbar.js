@@ -3,6 +3,8 @@ import { MDBCol } from "mdbreact";
 
 /* MDB Search Bar
 imports into the nav bar */
+
+/*Form search that allows the user to input*/
 const Searchbar = () => {
   return (
     <div class="searchBar">

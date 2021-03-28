@@ -12,7 +12,7 @@ const num_to_day = (num)=>{
     weekday[5] = "Friday";
     weekday[6] = "Saturday";
     return weekday[num]
-}
+}/* Displays information on the week, depending on what the current day is, up to 5 days ahead*/
     const weeklyView = ({weather}) => {
             if(weather.daily !== undefined ){
             return(
@@ -26,6 +26,7 @@ const num_to_day = (num)=>{
                                         {num_to_day(new Date(d.dt * 1000).getDay())}
                                     </MDBRow>
                                     <MDBRow center={true}>
+                                        {/* Show icon on weather condition */}
                                         <img
                                         src={`http://openweathermap.org/img/w/${d.weather[0].icon}.png`}
                                         height="50px"
@@ -41,7 +42,7 @@ const num_to_day = (num)=>{
                     </MDBContainer>
                 </main>
             )
-        }else{
+        }else{ /* If the daily weather can't be reached */
             return(<p>Loading</p>)
         }
 }

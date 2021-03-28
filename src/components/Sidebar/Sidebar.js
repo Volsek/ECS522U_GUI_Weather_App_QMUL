@@ -24,6 +24,9 @@ class SideBar extends Component{
     }));
   };
 
+
+  /* Collapsable hamburger menu to allow the user to navigate through the app 
+  Checks if the navbar is open or not, and collapses based on responsiveness */
   render(){
     return(
 

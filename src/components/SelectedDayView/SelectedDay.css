@@ -1,3 +1,5 @@
+/*Accurately presenting the data for each day on the screen */
+
 #mainContainter{
     display: flex;
     flex-direction: row;

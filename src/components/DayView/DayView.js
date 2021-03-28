@@ -1,5 +1,6 @@
 import "./DayView.css"
 
+// API access when the day is the current day
 const DayView = ({ pageWeather, indexApi }) => {
     if (pageWeather.current !== undefined  &&  indexApi != undefined  && indexApi == -1) {
         return (
