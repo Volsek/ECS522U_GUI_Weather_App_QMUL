@@ -1,7 +1,7 @@
 import "./DayView.css"
 
 
-
+/* Grab data for location from API, with corresponding image based on weather*/
 const DayView = ({ pageWeather, indexApi }) => {
     if (pageWeather.current !== undefined  &&  indexApi != undefined  && indexApi == -1) {
         return (

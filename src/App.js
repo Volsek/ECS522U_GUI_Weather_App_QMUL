@@ -3,13 +3,13 @@ import './App.css';
 import WeeklyView from "./components/WeeklyView/WeeklyView";
 import HourlyView from "./components/HourlyView/HourlyView";
 import SideBar from "./components/Sidebar/Sidebar";
-import SelectedDayView from './components/SelectedDayView/SelectedDayView';
 import DayView from './components/DayView/DayView'
-import SelectedDay2 from './components/SelectedDayView/Version2/SelectedDay2';
+import SelectedDay from './components/SelectedDayView/SelectedDay';
 import DaySpecView from './components/DaySpecificationView/DaySpecView'
 
 function App() {
   let currentDay = (new Date().getUTCDay())
+  /*Location Data : London*/
   let lat = 51.507351
   let lon = -0.127758
   const apikey = "d8d2a988639cedb5768cd091a9caa26b"
@@ -82,7 +82,7 @@ function App() {
   }
 
 
-
+/* Display Components on the APP*/
   return (
     <div className="App">
       <main>
@@ -90,9 +90,7 @@ function App() {
           <SideBar />
         </nav>
         <div id='SelectedDay'>
-          <SelectedDay2 pageWeather={pageWeather} indexApi={positionOnApi} moveFowardAction={moveNextDay} moveBackwardAction={movePrevDay} />
-
-
+          <SelectedDay pageWeather={pageWeather} indexApi={positionOnApi} moveFowardAction={moveNextDay} moveBackwardAction={movePrevDay} />
         </div>
         <div id='DayView'>
           <DayView pageWeather={pageWeather} indexApi={positionOnApi} />
