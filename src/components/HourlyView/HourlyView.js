@@ -2,6 +2,10 @@ import "./HourlyView.css"
 import { MDBContainer, MDBRow } from "mdbreact"
 import HourColumn from "./HourColumn"
 
+
+/* Display hourly weather information
+used in scrolling view to show weather
+changes for the duration of the day */
 const HourlyView = ({ weatherObject }) => {
     //Style to overwrite bootstrap MDrow  and make it scrollable 
     const styleMainROw = {

@@ -13,7 +13,6 @@ const num_to_day = (num)=>{
     weekday[6] = "Saturday";
     return weekday[num]
 }
-
     const weeklyView = ({weather}) => {
             if(weather.daily !== undefined ){
             return(

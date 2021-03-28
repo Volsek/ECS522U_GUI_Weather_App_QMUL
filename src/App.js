@@ -4,7 +4,7 @@ import WeeklyView from "./components/WeeklyView/WeeklyView";
 import HourlyView from "./components/HourlyView/HourlyView";
 import SideBar from "./components/Sidebar/Sidebar";
 import DayView from './components/DayView/DayView'
-import SelectedDay2 from './components/SelectedDayView/Version2/SelectedDay2';
+import SelectedDay2 from './components/SelectedDayView/SelectedDay2';
 import DaySpecView from './components/DaySpecificationView/DaySpecView'
 
 function App() {

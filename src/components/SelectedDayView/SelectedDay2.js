@@ -1,5 +1,6 @@
 import React from "react";
-import "./SelectedDay2.css"
+import "./SelectedDay.css"
+
 
 
 const SelectedDay2 = ({ pageWeather, indexApi, moveFowardAction, moveBackwardAction }) => {
@@ -28,7 +29,7 @@ const SelectedDay2 = ({ pageWeather, indexApi, moveFowardAction, moveBackwardAct
             <div id="mainContainter">
                 {/* Button used to move to the previous day */}
                 <div id="prevDay">
-                    <button type="button" onClick={moveBackwardAction}><img src="left.png" height="20px" width="20px" /> </button>
+                    <button type="button" onClick={moveBackwardAction}><img src="left-arrow.svg" height="20px" width="20px" /> </button>
                 </div>
                 {/* Time displayed in  the format : Monday, Tuesday, etc*/}
                 <div class="currentDay">
@@ -36,7 +37,7 @@ const SelectedDay2 = ({ pageWeather, indexApi, moveFowardAction, moveBackwardAct
                 </div>
                 {/* Button used to move to the previous day */}
                 <div id="nextDay">
-                    <button type="button" onClick={moveFowardAction}><img src="right.png" height="20px" width="20px" /> </button>
+                    <button type="button" onClick={moveFowardAction}><img src="right-arrow.svg" height="20px" width="20px" /> </button>
                 </div>
 
             </div>
@@ -47,7 +48,7 @@ const SelectedDay2 = ({ pageWeather, indexApi, moveFowardAction, moveBackwardAct
             <div id="mainContainter">
                 {/* Button used to move to the previous day */}
                 <div id="prevDay">
-                    <button type="button" onClick={moveBackwardAction}><img src="left.png" height="20px" width="20px" /> </button>
+                    <button type="button" onClick={moveBackwardAction}><img src="left-arrow.svg" height="20px" width="20px" /> </button>
                 </div>
                 {/* Time displayed in  the format : Monday, Tuesday, etc*/}
                 <div class="currentDay">
@@ -55,7 +56,7 @@ const SelectedDay2 = ({ pageWeather, indexApi, moveFowardAction, moveBackwardAct
                 </div>
                 {/* Button used to move to the next day */}
                 <div id="nextDay">
-                    <button type="button" onClick={moveFowardAction} ><img src="right.png" height="20px" width="20px" /> </button>
+                    <button type="button" onClick={moveFowardAction} ><img src="right-arrow.svg" height="20px" width="20px" /> </button>
                 </div>
 
             </div>
