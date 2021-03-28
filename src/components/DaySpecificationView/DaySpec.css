@@ -1,4 +1,4 @@
-.container1{ 
+.containerSpec{ 
     width: 100%;
     background: #54906c;
     display: flex;
@@ -7,15 +7,7 @@
     justify-content: space-around;
     margin: 0px;
     color: white;
-    
- 
-
 }
-
-
-
-
-
 
 .box { 
   display: flex;

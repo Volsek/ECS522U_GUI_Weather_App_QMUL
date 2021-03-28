@@ -1,5 +1,4 @@
 #mainContainter{
-    /*background-color: blue;*/
     display: flex;
     flex-direction: row;
     height: 100px;
@@ -8,20 +7,14 @@
 
 }
 
-
 #nextDay{
-    /*background-color: orange;*/
     width: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
-
-
 .currentDay{
-    /*background-color: red;*/
     width: 80%;
     display: flex;
     align-items: center;
@@ -36,7 +29,6 @@
 }
 
 #prevDay{
-    /*background-color: seagreen;*/
     width: 20%;
     display: flex;
     align-items: center;

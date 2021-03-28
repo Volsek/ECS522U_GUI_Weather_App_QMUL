@@ -11,7 +11,6 @@ const num_to_day = (num)=>{
     weekday[4] = "Thursday";
     weekday[5] = "Friday";
     weekday[6] = "Saturday";
-
     return weekday[num]
 }
 
@@ -35,7 +34,7 @@ const num_to_day = (num)=>{
                                         />
                                     </MDBRow>
                                     <MDBRow center={true}>
-                                        {d.temp.day} °C
+                                        {Math.round(d.temp.day)} °C
                                     </MDBRow>
                                 </MDBCol>
                             ))}

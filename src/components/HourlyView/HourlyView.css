@@ -1,21 +1,15 @@
 
-
-
 #main_row::-webkit-scrollbar{
     display: none;
 }
 /*Remove scrollbar for IE, EDGE , firefox*/
 #main_row{
     -ms-overflow-style: none;
-    scrollbar-width: none;
-  
+    scrollbar-width: none; 
 }
 
-
-
 .mainHoursContainer{
-    background-color:#54906c;
-    
+    background-color:#54906c;   
 }
 
 /*custom height column*/
@@ -24,20 +18,11 @@
     margin: 1rem;
     color: white;
     backdrop-filter: blur(10px);
-    padding: 0px 100px;
-    
-    
-
-  
-    
-   
-
-   
+    padding: 0px 100px;  
 }
 
 .rowHours, .rowTemperature{
     height: 20%;
-
 }
 
 .rowHours{
@@ -51,9 +36,11 @@
     width: 100%;
     height: 100%;
 }
+
 .rowPic{
     height: 60%;
     
+
 }
 h1 {
     display: flex;
@@ -61,18 +48,22 @@ h1 {
     flex-direction: row;
     color: white;
 }
+
 h1:before, h1:after{
     content: "";
     flex: 1 1;
     border-bottom: 1px solid;
     margin: auto;
 }
+
 h1:before {
     margin-right: 10px
 }
+
 h1:after {
     margin-left: 10px
 }
+
 div[class ="col"] {
     border: 1px dotted black;
 }

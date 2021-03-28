@@ -1,7 +1,5 @@
 import "./DayView.css"
 
-
-
 const DayView = ({ pageWeather, indexApi }) => {
     if (pageWeather.current !== undefined  &&  indexApi != undefined  && indexApi == -1) {
         return (
@@ -18,9 +16,9 @@ const DayView = ({ pageWeather, indexApi }) => {
                     </div>
 
                     <div className="weatherToday">
+
                         <div className="currentTodayWeather">
                             <img src={"http://openweathermap.org/img/w/" + pageWeather.current.weather[0].icon + ".png"} alt="weatherImage" witdth="60%" height="100%"></img>
-
                         </div>
 
                         <div className="detailedWeatherToday">
@@ -31,7 +29,8 @@ const DayView = ({ pageWeather, indexApi }) => {
                 </div>
             </div>
         )
-    }else if ((pageWeather != undefined  && indexApi != undefined  && indexApi > -1)){
+    }// Change way to access object from api when day is different from today 
+    else if ((pageWeather != undefined  && indexApi != undefined  && indexApi > -1)){
         return (
             <div className="dayMain">
                 <div className="location">
@@ -48,7 +47,6 @@ const DayView = ({ pageWeather, indexApi }) => {
                     <div className="weatherToday">
                         <div className="currentTodayWeather">
                             <img src={"http://openweathermap.org/img/w/" + pageWeather.weather[0].icon + ".png"} alt="weatherImage" witdth="60%" height="100%"></img>
-
                         </div>
 
                         <div className="detailedWeatherToday">
@@ -59,9 +57,7 @@ const DayView = ({ pageWeather, indexApi }) => {
                 </div>
             </div>
         )
-    }
-    
-    else {
+    }else {
         return(<p>Loading</p>)
     }
 }
